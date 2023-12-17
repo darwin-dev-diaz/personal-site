@@ -1,0 +1,32 @@
+body{
+    background-color: honeydew;
+}
+h2,
+h3{
+    text-align: center;
+}
+
+.journey{
+    border: black solid 1px;
+    width: 500px;
+    height: 500px;
+}
+
+.learning,
+.micro-saas,
+.saas{
+    border: grey dotted 1px;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.learning{
+    background-color: lightcoral;
+}
+.micro-saas{
+    background-color: lightgoldenrodyellow;
+}
+.saas{
+    background-color: lightgreen;
+}
