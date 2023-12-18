@@ -1,5 +1,16 @@
 body{
     background-color: honeydew;
+    align-content: center;
+}
+
+.content{
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+}
+h1{
+    margin-bottom: 90px;
+    text-align: center;
 }
 h2,
 h3{
@@ -15,6 +26,7 @@ h3{
 .learning,
 .micro-saas,
 .saas{
+    display: inline-block;
     border: grey dotted 1px;
     width: 100px;
     height: 100px;
