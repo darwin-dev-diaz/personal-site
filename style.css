@@ -1,129 +1,60 @@
-body{
-    background-color: honeydew;
-    align-content: center;
-    font-family: "Source Sans Pro", sans-serif;
+:root{
+    --mon-black: #272821;
+    --mon-red: #FB0170;
+    --mon-purple: #AD79F5;
+    --mon-blue: #13DCF2;
+    --mon-green: #94E400;
+    --mon-orange: #E78403;
+    --mon-yellow: #DED15E;
+    --mon-grey: #49483D;
+    --mon-white: #F8F8F1;
 }
 
-header {
+body{
+    background-color: var(--mon-black);
+    border: 10px solid black;
+    color: var(--mon-white);
+    font-family: 'Inconsolata';
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        'header header header'
+        'side-left main side-right'
+        'footer footer footer'
+    ;
+
+    height: 90vh;
+}
+
+.header,
+.side-left,
+.side-right,
+.main-content,
+.footer{
+    background-color: #fe80b8;
+    border: 10px solid var(--mon-red);
+}
+.header{
+    grid-area: header;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
-    padding: 25px;  
-    background-color: #ABD9AB;
 }
-
-.header-logo{
-    margin-right: auto;
-    font-size: 25px;
+.side-left{
+    grid-area: side-left;
 }
-.plan,
-.story,
-.successes,
-.journal{
-    color: black;
-    font-size: 20px;
-    text-decoration: underline dashed black;
-}
-.content{
-    display: flex;
-    align-items: flex-start;
-    border: 1px black solid;
-}
-.right-bar,
-.left-bar,
 .main-content{
-    flex: 1 1 auto;
+    grid-area: main;
 }
-.right-bar,
-.left-bar{
-    flex: 1 1 500px;
-    align-self: stretch;
-    background-color: lightcyan;
+.side-left{
+    grid-area: side-right;
 }
-
-.main-content{
-    padding: 75px;
-    width: 50%;
-    background-color: lightslategray;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 20px;
+.footer{
+    grid-area: footer;
 }
 
-.main-content .entry-para{
-}
-
-h1{
-    margin-bottom: 90px;
-    text-align: center;
-}
-h2{
-    font-size: 26px;
-}
-h3{
-    font-size: 20px;
-}
-
-p {
-    font-size: 20px;
-}
-.journey{
-    border: black solid 1px;
-    width: 500px;
-    height: 500px;
-}
-
-.learning,
-.micro-saas,
-.saas{
-    display: inline-block;
-    border: grey dotted 1px;
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-}
-
-.learning{
-    background-color: lightcoral;
-}
-.micro-saas{
-    background-color: lightgoldenrodyellow;
-}
-.saas{
-    background-color: lightgreen;
-}
-
-.essay-title {
-    font-size: 100px;
-    letter-spacing: -6px;
-}
-
-.journey-box {
-    align-self: center;
-    width: 75%;
-}
-
-.journey-title {
-    text-align: center;
-}
-
-.journey-step-container{
+.links{
     display: flex;
     gap: 25px;
-}
-.journey-step{
-    border: black solid 1px;
-    height: 100px;
-    flex: 1 1 100px;
-}
-
-.journey-step.one{
-    background-color: lightcoral;
-}
-.journey-step.two{
-    background-color: lightgoldenrodyellow;
-}
-.journey-step.three{
-    background-color: lightgreen;
 }
