@@ -6,7 +6,7 @@
     --mon-green: #94E400;
     --mon-orange: #E78403;
     --mon-yellow: #DED15E;
-    --mon-grey: #49483D;
+    --mon-grey: #3E3D32;
     --mon-white: #F8F8F1;
 }
 
@@ -86,8 +86,8 @@ body{
 }
 /* CONTENT */
 .body-text{
-    letter-spacing: 1px;
-    line-height: 150%;
+    letter-spacing: .5px;
+    line-height: 125%;
     font-size: 17px;
 }
 .main-content{
@@ -120,10 +120,61 @@ body{
 }
 .activity-feed{
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
 .activity-header-right > h2{
     color: var(--mon-red);
     font-size: 32px;
+    margin: 0;
+}
+
+/* post box styling */
+.post-box{
+    background-color: var(--mon-grey);
+    padding: 5% 13% 5% 13%;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.daily-post span{
+    color: var(--mon-red);
+}
+.daily-post h3 span{
+    font-size: 28px;
+    font-weight: 300;
+}
+.daily-post h3::before{
+    content: '📮';
+}
+
+
+
+.books-post span{
+    color: var(--mon-purple);
+}
+.books-post h3 span{
+    font-size: 28px;
+    font-weight: 300;
+}
+.books-post h3::before{
+    content: '🦉';
+}
+
+
+
+.plan-post span{
+    color: var(--mon-blue);
+}
+.plan-post h3::before{
+    content: '✈️';
+}
+h3{
+    font-size: 24px;
     margin: 0;
 }
 
