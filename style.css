@@ -10,6 +10,10 @@
     --mon-white: #F8F8F1;
 }
 
+.mon-red{
+    color: var(--mon-red);
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -51,7 +55,9 @@ body{
     grid-row-gap: 90px;
 /* temp */
 }
-
+a{
+    text-decoration: none;
+}
 .header-left,
 .header-right,
 .header,
@@ -67,7 +73,12 @@ body{
     align-items: center;
 }
 .logo{
-    font-size: 24px
+    font-size: 24px;
+    color: var(--mon-white);
+}
+
+.logo:hover{
+    color: var(--mon-green);
 }
 
 .links{
