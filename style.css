@@ -16,6 +16,18 @@
 .mon-red-background{
     background-color: var(--mon-red);
 }
+.mon-purple-text{
+    color: var(--mon-purple);
+}
+.mon-purple-background{
+    background-color: var(--mon-purple);
+}
+.mon-blue-text{
+    color: var(--mon-blue);
+}
+.mon-blue-background{
+    background-color: var(--mon-blue);
+}
 .mon-grey{
     color: var(--mon-grey);
 }
