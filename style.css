@@ -10,8 +10,14 @@
     --mon-white: #F8F8F1;
 }
 
-.mon-red{
+.mon-red-text{
     color: var(--mon-red);
+}
+.mon-red-background{
+    background-color: var(--mon-red);
+}
+.mon-grey{
+    color: var(--mon-grey);
 }
 
 /* width */
@@ -58,6 +64,18 @@ body{
 a{
     text-decoration: none;
 }
+h1{
+    font-size: 52px;
+    margin: 0px;
+}
+h2{
+    font-size: 32px;
+    margin: 0;
+}
+h3{
+    font-size: 24px;
+    margin: 0;
+}
 .header-left,
 .header-right,
 .header,
@@ -99,7 +117,7 @@ a{
 .body-text{
     letter-spacing: .5px;
     line-height: 125%;
-    font-size: 17px;
+    font-size: 24px;
 }
 .main-content{
     grid-area: main;
@@ -108,6 +126,8 @@ a{
     justify-content: center;
     align-items: center;
     gap: 90px;
+
+    /* background-color: red; */
 }
 .hero{
     display: flex;
@@ -115,10 +135,6 @@ a{
 }
 .hero-right > h1 > span{
     text-decoration: underline;
-}
-.hero-right > h1{
-    font-size: 42px;
-    margin: 0px;
 }
 .hero-right > p{
     width: 85%;
@@ -184,10 +200,7 @@ a{
 .plan-post h3::before{
     content: '✈️';
 }
-h3{
-    font-size: 24px;
-    margin: 0;
-}
+
 
 /* FOOTER */
 .footer{
@@ -198,4 +211,37 @@ h3{
 }
 .footer-right{
     grid-area: footer-right;
+}
+
+/* POST SPECIFIC STYLES */
+
+.tag{
+    padding: 16px;
+}
+.tag > h3 {
+    font-weight: bold;
+}
+.post-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.post-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    gap: 90px;
+}
+.post-section{
+    display: flex;
+    flex-direction: column;
+}
+.post-img{
+    width: 65%;
+    align-self: center;
 }
