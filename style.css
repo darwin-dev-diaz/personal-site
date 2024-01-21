@@ -129,7 +129,16 @@ h3{
 .body-text{
     letter-spacing: .5px;
     line-height: 125%;
-    font-size: 24px;
+    font-size: 20px;
+    list-style-type: square;
+}
+
+.body-link{
+    letter-spacing: .5px;
+    line-height: 125%;
+    font-size: 20px;
+    list-style-type: square;
+    text-decoration: underline;
 }
 .main-content{
     grid-area: main;
@@ -226,6 +235,11 @@ h3{
 }
 
 /* POST SPECIFIC STYLES */
+
+.tags{
+    display: flex;
+    gap: 5px;
+}
 
 .tag{
     padding: 16px;
