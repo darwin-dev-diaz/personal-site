@@ -31,6 +31,9 @@
 .mon-grey{
     color: var(--mon-grey);
 }
+.underline{
+    text-decoration: underline;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -88,6 +91,9 @@ h3{
     font-size: 24px;
     margin: 0;
 }
+li{
+    margin: 15px;
+}
 .header-left,
 .header-right,
 .header,
@@ -126,6 +132,7 @@ h3{
     color: var(--mon-blue);
 }
 /* CONTENT */
+.bt,
 .body-text{
     letter-spacing: .5px;
     line-height: 125%;
