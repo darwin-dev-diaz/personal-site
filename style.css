@@ -300,3 +300,19 @@ li{
     display: flex;
     gap: 15px;
 }
+
+/* special case */
+.monthly-special{
+    /* background-color: #260011; */
+    background-color: #1E000D;
+}
+
+.monthly-special .header-left,
+.monthly-special .header-right,
+.monthly-special .header,
+.monthly-special .footer,
+.monthly-special .footer-left,
+.monthly-special .footer-right{
+    /* background-color: #2F0015; */
+    background-color: #1C000C;
+}
