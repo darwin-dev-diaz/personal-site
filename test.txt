@@ -1,0 +1,12 @@
+[DATE]:January 30, 2024
+[TITLE]:January 2024 Recap
+[SUBTITLE]:Let's reflect
+
+2This is what an h2 title looks like2
+
+ul
+- this
+- is 
+- an
+- unordered list
+ul
