@@ -1,12 +1,12 @@
 [DATE]:January 30, 2024
 [TITLE]:January 2024 Recap
 [SUBTITLE]:Let's reflect
-
 2This is what an h2 title looks like2
+ul
+- test
+- test
+- test
+ul
 
-ul
-- this
-- is 
-- an
-- unordered list
-ul
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+
