@@ -7,8 +7,10 @@ fs.readFile("test.txt", "utf8", (err, data) => {
   }
 
   //break up data by line breaks
-  let test = data.split("\n").filter((entry) => entry.trim());
-  console.log(pairUnorderedList(test));
+  let dataArr = data.split("\n").filter((entry) => entry.trim());
+  console.log(pairUnorderedList(dataArr));
+
+//   TODO: splice dataArr and replace the uls with the list from pairUnorderedList
 });
 
 function pairUnorderedList(arr) {
@@ -31,6 +33,6 @@ function pairUnorderedList(arr) {
     }
   }
 
-  if (list.length === 0) return 'null';
-  else if(list) return { ulStart, ulEnd, list };
+  if (list.length === 0) return null;
+  else if(list) return [ ulStart, ulEnd, list ];
 }
