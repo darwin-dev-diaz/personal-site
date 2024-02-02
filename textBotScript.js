@@ -11,9 +11,8 @@ fs.readFile("test.txt", "utf8", (err, data) => {
   let dataArr = data.split("\n").filter((entry) => entry.trim());
   let sortedArr = reduceUls(dataArr);
 
-  for (element of sortedArr) {
-    console.log(element);
-  }
+  populateHeader(sortedArr);
+  console.log(sortedArr);
 });
 
 function pairUnorderedList(arr) {
@@ -52,7 +51,22 @@ function reduceUls(arr) {
   return newArr;
 }
 
-function createNodeList(arr) {
+function populateHeader(arr){
+  const tagList = document.querySelectorAll(".tag.mon-red-background>h3");
+  tagList[0].textContent = arr.shift().match(/(?<=\[POSTNUM\]:)(.*)/g);
+  tagList[1].textContent = arr.shift().match(/(?<=\[DATE\]:)(.*)/g);
+
+  const title = document.querySelector(".post-title");
+  title.textContent = arr.shift().match(/(?<=\[TITLE\]:)(.*)/g);
+
+  console.log(arr);
+  const subtitle = document.querySelector("#post-subtitle");
+  subtitle.textContent = arr.shift().match(/(?<=\[SUBTITLE\]:)(.*)/g);
+}
+
+
+function createContentNodes(arr) {
+  const nodeList = [];
   const dateNodeObj = {
     regex: new RegExp("(?<=[DATE]:)(.*)", ""),
     elementType: 'div',

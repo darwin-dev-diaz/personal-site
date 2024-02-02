@@ -1,6 +1,7 @@
+[POSTNUM]:Daily #8
 [DATE]:January 30, 2024
-[TITLE]:January 2024 Recap
-[SUBTITLE]:Let's reflect
+[TITLE]:TITLE OF POST
+[SUBTITLE]:SUBTITLE OF POST
 2This is what an h2 title looks like2
 ul
 - test
@@ -10,3 +11,8 @@ ul
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
 
+
+let test = ['[POSTNUM]:Daily #8',
+'[DATE]:January 30, 2024',
+'[TITLE]:TITLE OF POST',
+'[SUBTITLE]:SUBTITLE OF POST']
