@@ -12,7 +12,6 @@ fs.readFile("test.txt", "utf8", (err, data) => {
   let sortedArr = reduceUls(dataArr);
 
   populateHeader(sortedArr);
-  console.log(sortedArr);
 });
 
 function pairUnorderedList(arr) {
@@ -59,36 +58,23 @@ function populateHeader(arr){
   const title = document.querySelector(".post-title");
   title.textContent = arr.shift().match(/(?<=\[TITLE\]:)(.*)/g);
 
-  console.log(arr);
   const subtitle = document.querySelector("#post-subtitle");
   subtitle.textContent = arr.shift().match(/(?<=\[SUBTITLE\]:)(.*)/g);
 }
 
-
-function createContentNodes(arr) {
+// at this point the arr only has relevant content
+function populatePostContent(arr) {
   const nodeList = [];
-  const dateNodeObj = {
-    regex: new RegExp("(?<=[DATE]:)(.*)", ""),
-    elementType: 'div',
-    classList: ['tag','mon-red-background'],
-  };
-  
-  const dateRegex = new RegExp("(?<=[DATE]:)(.*)", "");
-  const titleRegex = new RegExp("(?<=[TITLE]:)(.*)", "");
-  const subTitleRegex = new RegExp("(?<=[SUBTITLE]:)(.*)", "");
   const h2Regex = new RegExp("(?<=h2)(.*)(?=h2)", "g");
-  // you dont need a regex for a the uls because they will be in lists
-  // if an entry doesn't match any of those regular expressions, then you know its a paragraph
 
+  let startSection = document.createElement('div');
+  startSection.classList.add("post-section");
   for (element of arr) {
-    if(typeof element === 'string'){
-      // run each regular expression
-      // if a regular expression returns true, write the entry as the appropriate node
-      const testElement = document.createElement('div');
-      // if the regular expressions all return fasle, write the entry as a paragraph node
-
-    } else {
-      
-    }
+    // if element.match h2. create new section
+    let newNode = document.createElement('p'); 
+    newNode.classList.add('bt');
+    newNode.textContent = element;
+    startSection.appendChild(newNode);
+    //  looping through the elements appending the created element to the startSection
   }
 }
