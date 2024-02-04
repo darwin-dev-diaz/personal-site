@@ -72,7 +72,6 @@ function populateHeader(arr) {
 
 // at this point the arr only has relevant content
 function populatePostContent(arr) {
-  const nodeList = [];
   const h2Regex = new RegExp("(?<=h2)(.*)(?=h2)", "g");
 
   const postContent = document.createElement("div");
