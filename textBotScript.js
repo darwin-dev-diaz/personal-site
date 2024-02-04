@@ -1,7 +1,11 @@
 const fs = require("fs");
-const { start } = require("repl");
+const { JSDOM } = require("jsdom");
 
-fs.readFile("test.txt", "utf8", (err, data) => {
+//jsdom instance
+const dom = new JSDOM();
+const document = dom.window.document;
+
+fs.readFile("justH2andPARA.txt", "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
@@ -11,7 +15,10 @@ fs.readFile("test.txt", "utf8", (err, data) => {
   let dataArr = data.split("\n").filter((entry) => entry.trim());
   let sortedArr = reduceUls(dataArr);
 
-  populateHeader(sortedArr);
+  // populateHeader(sortedArr);
+
+  console.log(sortedArr);
+  populatePostContent(sortedArr);
 });
 
 function pairUnorderedList(arr) {
@@ -50,7 +57,8 @@ function reduceUls(arr) {
   return newArr;
 }
 
-function populateHeader(arr){
+// have this one return an outerHTML thing like the other one
+function populateHeader(arr) {
   const tagList = document.querySelectorAll(".tag.mon-red-background>h3");
   tagList[0].textContent = arr.shift().match(/(?<=\[POSTNUM\]:)(.*)/g);
   tagList[1].textContent = arr.shift().match(/(?<=\[DATE\]:)(.*)/g);
@@ -67,14 +75,41 @@ function populatePostContent(arr) {
   const nodeList = [];
   const h2Regex = new RegExp("(?<=h2)(.*)(?=h2)", "g");
 
-  let startSection = document.createElement('div');
-  startSection.classList.add("post-section");
+  const postContent = document.createElement("div");
+  postContent.classList.add("post-content");
+
+  let currentPostSection = document.createElement("div");
+  currentPostSection.classList.add("post-section");
+
   for (element of arr) {
-    // if element.match h2. create new section
-    let newNode = document.createElement('p'); 
-    newNode.classList.add('bt');
-    newNode.textContent = element;
-    startSection.appendChild(newNode);
-    //  looping through the elements appending the created element to the startSection
+    if (typeof element === "object") {
+      let newUL = document.createElement("ul");
+      newUL.classList.add("bt");
+
+      for (const li in element) {
+        let newLI = document.createElement("li");
+        newLI.textContent = li;
+        newUL.appendChild(newLI);
+      }
+
+      currentPostSection.appendChild(newUL);
+    } else if (element.match(h2Regex)) {
+      postContent.appendChild(currentPostSection);
+      currentPostSection = document.createElement("div");
+
+      let newH2 = document.createElement("h2");
+      newH2.classList.add("mon-red-text");
+      newH2.textContent = element.match(h2Regex)[0];
+      currentPostSection.appendChild(newH2);
+    } else {
+      let newPara = document.createElement("p");
+      newPara.classList.add("bt");
+      newPara.textContent = element;
+
+      currentPostSection.appendChild(newPara);
+    }
   }
+
+  postContent.appendChild(currentPostSection);
+  console.log(postContent.outerHTML);
 }

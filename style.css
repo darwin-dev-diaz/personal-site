@@ -189,6 +189,22 @@ li{
 }
 
 /* post box styling */
+.post-title{
+    /* text-shadow: 1px 1px 20px red, 0 0 .5em blue, 0 0 0.1em blue; */
+    /* text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.1em blue; */
+    color: var(--mon-white);
+    font-size: 75px;
+    text-transform: capitalize;
+    text-shadow: -1px 1px 0 var(--mon-green),
+          1px 1px 0 var(--mon-red),
+         1px -1px 0 var(--mon-blue),
+        -1px -1px 0 var(--mon-yellow);
+}
+.post-subtitle{
+    letter-spacing: .2em;
+    font-style: italic;
+}
+
 .post-box{
     background-color: var(--mon-grey);
     padding: 5% 13% 5% 13%;
