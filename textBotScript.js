@@ -17,8 +17,9 @@ fs.readFile("justH2andPARA.txt", "utf8", (err, data) => {
 
   // populateHeader(sortedArr);
 
-  console.log(sortedArr);
-  populatePostContent(sortedArr);
+  // console.log(sortedArr);
+  // const postHeader = populatePostContent(sortedArr.slice(0,4));
+  const postContent = populatePostContent(sortedArr.slice(4));
 });
 
 function pairUnorderedList(arr) {
@@ -85,7 +86,7 @@ function populatePostContent(arr) {
       let newUL = document.createElement("ul");
       newUL.classList.add("bt");
 
-      for (const li in element) {
+      for (const li of element) {
         let newLI = document.createElement("li");
         newLI.textContent = li;
         newUL.appendChild(newLI);
@@ -95,6 +96,7 @@ function populatePostContent(arr) {
     } else if (element.match(h2Regex)) {
       postContent.appendChild(currentPostSection);
       currentPostSection = document.createElement("div");
+      currentPostSection.classList.add("post-section");
 
       let newH2 = document.createElement("h2");
       newH2.classList.add("mon-red-text");
@@ -110,5 +112,5 @@ function populatePostContent(arr) {
   }
 
   postContent.appendChild(currentPostSection);
-  console.log(postContent.outerHTML);
+  return postContent;
 }

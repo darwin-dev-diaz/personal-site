@@ -1,11 +1,62 @@
-para 1
-para 2
-para 3
+[POSTNUM]:Daily #8
+[DATE]:January 30, 2024
+[TITLE]:TITLE OF POST
+[SUBTITLE]:SUBTITLE OF POST
 
-h2TESTh2
-para7c
+It's been a few days since I last updated you. A couple things have happened since we last spoke.
+
+h2Romance over...h2
+For starters, my romantic partner is no longer staying here. I drove her to the airport and we said our goodbyes.
+
+The two weeks we had to spend together has ended and I'm back to living alone. To be honest with you, I regret having spent so much time wishing I was alone.
+
+I wish I lived in the moment more. I should've accepted that our time together was relaxing time. Worrying so much about my productivity ruined our experience a bit.
+
+That's not to say that the time we spent together was bad. We both made memories we'll never forget and agreed we know and love each other on a deeper level. I wish that I savored it more. It's cliche to say but you don't know what you have until it's gone.
+
+h2Back on the grind.h2
+I'm back on my shit now though. Finished two good Deep Work sessions. I progressed through the Odin project by a good, healthy chunk. I'll do my best to fit in another deep work session today.
+
+My concentration is rusty. For the time being, giving my full attention to a task is a bit difficult. This will for sure improve as purposeful work becomes a habit again. I'm not too worried about it.
+
+Tomorrow, I'll reflect on how the first month of this year went and come up with a theme for the monthly posts. It'll serve me well to also make a template for weekly post.
+
+h2Sleep.h2
+Last night I didn't sleep so well. It's because I was too stimulated from work and kept trying to sleep when my body wanted to stay awake. And apparently , my landlady is a fucking blacksmith hammering away at something. So that doesn't help.
+
+This night I'll make sure to wear ear plugs and start this wind down routine :
 ul
-one
-two
-three
+After I've finished deep work or my daily toils, I'm letting my mind relax
+I'll meditate and read a book and drink some tea
+My last meal will be around 8pm-9pm
+I'll be in bed by 10:30pm
 ul
+
+h2Going forward.h2
+I'm excited to see how my life is going to progress now that I have every variable under my control. I've been having visions of success. While I lay awake on my bed, I see what life will be like for me.
+
+I see multiple successful Shopify apps that I treat more like money-making engines.
+
+I build the engines with code and feed it the ingredients that they need to make money.
+
+Stream of relevant eyes, superior customer support, continuous refinement...
+
+The market is an open, crying mouth and I know how to feed it. I will feed it.
+
+I see myself walking into my grocery store and giving them a two weeks notice. I've achieved the goal nobody but me knew would work.
+
+I look at the face of a coworker who doubted me and smile. I smile and know that we are both reaping the rewards of our minds. My mind is always changing. I admit when I'm wrong and believe that I can achieve anything. His mind is certain and inconsiderate. He won't get far and the only real difference between him and I is the way we CHOOSE TO THINK.
+
+I see myself being out and about in my van. Visiting every interesting spot in America with my romantic partner.
+
+Camping.
+
+Going to the beach.
+
+Learning how to make fires in the wilderness.
+
+Learning how to build interesting things like these absolute beasts.
+
+I want to see the world and live a way no one from my home town knows to be possible. I want to her to see it with me.
+
+I don't want these things, they are inevitable and they are going to happen.
