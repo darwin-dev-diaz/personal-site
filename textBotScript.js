@@ -20,6 +20,7 @@ fs.readFile("justH2andPARA.txt", "utf8", (err, data) => {
   // console.log(sortedArr);
   // const postHeader = populatePostContent(sortedArr.slice(0,4));
   const postContent = populatePostContent(sortedArr.slice(4));
+  console.log(postContent.outerHTML);
 });
 
 function pairUnorderedList(arr) {
@@ -38,7 +39,6 @@ function pairUnorderedList(arr) {
         ulEnd = i;
         break;
       }
-
       if (ulFound && element.trim().toLowerCase() !== "ul") {
         list.push(element);
       }
